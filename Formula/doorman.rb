@@ -1,8 +1,8 @@
 class Doorman < Formula
   desc "Pick the browser, Chrome profile or Zen workspace for every link you open"
   homepage "https://github.com/schowave/doorman"
-  url "https://github.com/schowave/doorman/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "eae3622886c9e1152dbe69720c16a0257074eec7c088d07109294ea8a030cbdf"
+  url "https://github.com/schowave/doorman/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "71da32b7b8bff86b2a1338cb3435a2f83a4d0fb44483ba5d00d2f25b41064ff3"
   license "MIT"
   head "https://github.com/schowave/doorman.git", branch: "main"
 
@@ -24,10 +24,9 @@ class Doorman < Formula
     <<~EOS
       Start Doorman once; it then offers to become your default browser,
       links itself to ~/Applications/Doorman.app and adds a login item:
-        open #{opt_prefix}/Doorman.app
+        doorman
 
-      After `brew upgrade doorman`, quit Doorman from the menu bar and run
-        open ~/Applications/Doorman.app
+      After `brew upgrade doorman`, quit Doorman from the menu bar and run `doorman` again.
       Configuration: ~/.config/doorman/config.json (menu bar → Konfiguration öffnen…)
     EOS
   end
