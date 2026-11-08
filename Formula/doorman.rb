@@ -1,8 +1,8 @@
 class Doorman < Formula
   desc "Pick the browser, Chrome profile or Zen workspace for every link you open"
   homepage "https://github.com/schowave/doorman"
-  url "https://github.com/schowave/doorman/archive/refs/tags/v0.2.2.tar.gz"
-  sha256 "f2ca93c7753fcb6971a1a63413c472878b559459d054d62ee611746b2cc1fb92"
+  url "https://github.com/schowave/doorman/archive/refs/tags/v0.2.3.tar.gz"
+  sha256 "c8b22f994843fd4d2c429b35f9288bb0d52cfc60278c90b071a9c95b93944736"
   license "MIT"
   head "https://github.com/schowave/doorman.git", branch: "main"
 
