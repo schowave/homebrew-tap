@@ -1,15 +1,15 @@
 class Doorman < Formula
   desc "Pick the browser, Chrome profile or Zen workspace for every link you open"
   homepage "https://github.com/schowave/doorman"
-  url "https://github.com/schowave/doorman/archive/refs/tags/v0.2.5.tar.gz"
-  sha256 "30dc509fcb094b6dee43f446cf62ded6dfdb8b90d0d78c8b48f3e59dba71f79b"
+  url "https://github.com/schowave/doorman/archive/refs/tags/v0.2.6.tar.gz"
+  sha256 "c6d07d4ae305035edc3ed2f993e86eeb328abf9a63fcc9e013819370383dedba"
   license "MIT"
   head "https://github.com/schowave/doorman.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/schowave/doorman/releases/download/v0.2.5"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "79b10ca5564d60f309d02c2615fa66accffc93b94155aebd0976b2b0341dd385"
-    sha256 cellar: :any_skip_relocation, sequoia:       "75205ef437536b9f168be4abeccf0c5c62c21f2f254fd49d5a4a0ec35a6b4fe9"
+    root_url "https://github.com/schowave/doorman/releases/download/v0.2.6"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "17c77e22ac7adf60ee8e87b34a64885802ed8c9b9a38820f4fbd6ba27543d2b9"
+    sha256 cellar: :any_skip_relocation, sequoia:       "92006cd8f1b1792753a3d4a4416adfbfd41f6c0228c0d29ca0b207a875177076"
   end
 
   # Only when building from source; bottles need no Xcode.
