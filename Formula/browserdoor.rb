@@ -1,15 +1,15 @@
 class Browserdoor < Formula
   desc "Pick the browser, Chrome profile or Zen workspace for every link you open"
   homepage "https://github.com/schowave/browserdoor"
-  url "https://github.com/schowave/browserdoor/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "5137bcbcd9b9c650ccc5ec9e08543fc828048d189676135b87da052837455f76"
+  url "https://github.com/schowave/browserdoor/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "50c4253898a3581ec00bd0ad3e16a1e7bc134e774cc3d89c59b12b857fd11d8c"
   license "MIT"
   head "https://github.com/schowave/browserdoor.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/schowave/browserdoor/releases/download/v0.3.0"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e846f5e4e6dcdd1f43db74914ab66a94a8f1ee5b26a8af56637fc9344b2d9864"
-    sha256 cellar: :any_skip_relocation, sequoia:       "1c881d1ba6ced8b57c7ef62884d1315b0e30521d674cd96d87ae4645cc19bc21"
+    root_url "https://github.com/schowave/browserdoor/releases/download/v0.4.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "4e78840ae7c55ccf82300e828f4f24e802a38da3c34d084429737ccb3c124109"
+    sha256 cellar: :any_skip_relocation, sequoia:       "baaeea8fbe02e16badec3405ba8d7a284dd8a6fee77433c1067fc047ac3c1aee"
   end
 
   # Only when building from source; bottles need no Xcode.
