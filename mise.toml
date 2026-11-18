@@ -1,0 +1,31 @@
+# Workspace standard: `mise run setup` after a fresh clone, `mise run check` before every push.
+# Homebrew itself is not required; the checks only validate syntax.
+
+[tools]
+ruby = "4.0.9"
+jq = "1.8.2"
+actionlint = "1.7.12"
+
+[settings]
+# Use precompiled Ruby binaries instead of building from source (fast CI).
+ruby.compile = false
+
+[tasks.setup]
+description = "Install all pinned tools"
+run = "mise install"
+
+[tasks."check:ruby"]
+description = "Ruby syntax check of every formula and cask"
+run = "find Formula Casks -type f -name '*.rb' -print0 | xargs -0 -n1 ruby -wc"
+
+[tasks."check:json"]
+description = "Validate JSON files"
+run = "jq empty formula_renames.json"
+
+[tasks."check:actionlint"]
+description = "Lint GitHub Actions workflows"
+run = "actionlint"
+
+[tasks.check]
+description = "Everything that must be green before a push"
+depends = ["check:ruby", "check:json", "check:actionlint"]
